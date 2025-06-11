@@ -1,8 +1,16 @@
-import time
+from openai import OpenAI
+import os
 
+client = OpenAI(
+    api_key=""
+)
 
-print("ロケット発射まで。。。")
-for i in range(5,0,-1):
-    print(f"{i}....")
-    time.sleep(1) #１秒まつ
-print("発射！！")
+response = client.chat.completions.create(
+    model="gpt-4.1-nano-2025-04-14",
+    messages=[
+        {"role": "user", "content": "プログラミングを始めたばかりの私に励ましの言葉をください"}
+    ]
+)
+
+print("AIからのメッセージ")
+print(response.choices[0].message.content)
