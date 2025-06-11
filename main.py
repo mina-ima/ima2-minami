@@ -1,18 +1,8 @@
+import time
 
 
-import random
-運勢 = random.randint(1,100)
-print(f"今日のあなたの運勢は。。。{運勢}点です。")
-if 運勢 >= 80:
-    print ("今日のあなたの運勢は最高です。")    
-elif 運勢 >= 60:
-    print ("今日のあなたの運勢はまずまずです。")    
-elif 運勢 >= 40:
-    print ("今日のあなたの運勢は踏ん張りどころです。")    
-elif 運勢 >= 20:
-    print ("今日のあなたの運勢は諦めましょうです。") 
-elif 運勢 < 20:
-    print ("今日はウチに篭りましょう")   
-
-
-
+print("ロケット発射まで。。。")
+for i in range(5,0,-1):
+    print(f"{i}....")
+    time.sleep(1) #１秒まつ
+print("発射！！")
